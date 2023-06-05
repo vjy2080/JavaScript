@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical 02</title>
 </head>
+
 <body>
     <script>
         // 50+50
@@ -18,36 +20,90 @@
         // console.log(variable_let_name);
         // console.log(variable_const_name);
         // console.log(variable_name);
-    
-        // let variablewithlet = "Let keyword varaible" // declaration with inti val
-        // // let variablewithlet = "Let keyword varaible" // re-declaration with inti val //Identifier 'variablewithlet' has already been declared 
-        // console.log(variablewithlet);
-        // variablewithlet = "Let keyword varaible new value loosely type lang." // re-assignement 
-        // console.log(variablewithlet);
-        
-        // var variablewithvar = "var keyword varaible" //declaration with inti val 
+
+        //We will check variable and understand how to work it.
+
+        // ======This is the variable example of "var"======
+
+        // => declaration with integer value 
+
+        // var variablewithvar = "var keyword varaible" 
         // console.log(variablewithvar); 
-        // var variablewithvar = "var keyword varaible redeclaration" //re- declaration with val 
-        // console.log(variablewithvar);
-        // variablewithvar = "Let keyword varaible new value loosely type lang." // re-assignement 
+
+        // => re- declaration with val 
+
+        // var variablewithvar = "var keyword varaible redeclaration"
         // console.log(variablewithvar);
 
-        // const constantData = "constant Data" //declaration with inti val 
+        // => re-assignement 
+
+        // variablewithvar = "Let keyword varaible new value loosely type lang."
+        // console.log(variablewithvar);
+
+
+        /* We will found variable with var keyword can possible re-declaration and re-assignment */
+
+        /* ======================================================= */
+
+
+        // =======This is the variable example of "let"=======
+
+
+
+        // => declaration with integer value
+
+        // let variablewithlet = "Let keyword varaible" 
+        // console.log(variablewithlet);
+
+        // => re-declaration with integer value 
+
+        // Found this error : Identifier 'variablewithlet' has already been declared 
+
+        // let variablewithlet = "Let keyword varaible" 
+        // console.log(variablewithlet);
+
+
+        // re-assignement 
+        // variablewithlet = "Let keyword varaible new value loosely type lang." 
+        // console.log(variablewithlet);
+
+        // ======== This is the variable example of "const" ==========
+
+
+        // => declaration with integer value 
+
+        // const constantData = "constant Data" 
         // console.log(constantData); 
-        // const constantData = "constantData" //re- declaration with val // Identifier 'constantData' has already been declared
+
+        // => re-declaration with val 
+        // Found this error : Identifier 'constantData' has already been declared
+
+        // const constantData = "constantData"
         // console.log(constantData);
-        // constantData = "constantData" // re-assignement //Uncaught TypeError: Assignment to constant variable.
+
+        // re-assignement
+        // Found this error : Uncaught TypeError: Assignment to constant variable.
+
+
+        // constantData = "constantData" 
         // console.log(constantData);
-        
+
+        // Example of variable 
+
         // for (let index = 0; index < 5; index++) {
-        //     console.log("inside Loop",index);
+        // console.log("inside Loop",index);
         // }
         // console.log("Outside ",index);
+
+        // Found this error : Uncaught ReferenceError: index is not defined
+
         // for (var index = 0; index < 5; index++) {
-        //     console.log("inside Loop",index);
+            // console.log("inside Loop", index);
         // }
-        // console.log("Outside ",index);
+        // console.log("Outside ", index);
+
 
     </script>
 </body>
+
 </html>
