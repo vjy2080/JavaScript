@@ -12,10 +12,13 @@
     <script>
 
         firstCandidateAge = 2;
-        console.log("FirstCandidate Age is => " + firstCandidateAge);
+        console.log("firstCandidate Age is => " + firstCandidateAge);
 
         secondCandidateAge = 20;
         console.log("secondCandidate Age is => " + secondCandidateAge);
+
+        thirdCandidateAge = 62;
+        console.log("thirdCandidate Age is => " + thirdCandidateAge);
 
         ageLimit = 18;
 
@@ -25,7 +28,11 @@
 
         console.log("For First candidate")
 
-        if (firstCandidateAge > 18) {
+        if (firstCandidateAge > 60) {
+            console.log("Not Eligible")
+        }
+
+        else if (firstCandidateAge > 18) {
             console.log("You can drive")
 
         } else {
@@ -38,19 +45,49 @@
         /* For Second candidate*/
         console.log("For Second candidate")
 
-        if (secondCandidateAge > 18) {
+        if (secondCandidateAge > 60) {
+            console.log("Not Eligible")
+        }
+        else if (secondCandidateAge > 18) {
             console.log("You can drive")
 
-        } else {
+        } else { (secondCandidateAge >= 18)
             console.log("You can't drive")
 
         }
 
+        /* For third candidate*/
+        console.log("For third candidate")
+
+        if (thirdCandidateAge > 60) {
+            console.log("Not Eligible")
+        }
+        else if (thirdCandidateAge > 18) {
+            console.log("You can drive")
+
+        } else { (thirdCandidateAge >= 18)
+            console.log("You can't drive")
+
+        }
+
+        /*=====================================================*/
+
         /* Student's Marksheeet */
 
-console.log("Student's Marksheet")
+        console.log("Student's Marksheet")
 
-        getMarks = 50
+        
+        // sonu = 35;
+        // console.log("Result of sonu => " + (getMarks = sonu));
+        
+        // soham = 65;
+        // console.log("Result of soham => " + (getMarks = soham));
+        
+        // john = 75;
+        // console.log("Result of john => " + (getMarks = john));
+        
+        vijay = 85;
+        console.log("Result of vijay => " + (getMarks = vijay));
 
         if (getMarks >= 100) {
             console.log("Invalid Value")
@@ -74,7 +111,9 @@ console.log("Student's Marksheet")
         }
         else if (getMarks <= 0) {
             console.log("Invalid Value")
-        }
+        };
+
+
     </script>
 </body>
 
