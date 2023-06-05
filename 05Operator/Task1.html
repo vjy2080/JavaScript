@@ -9,55 +9,88 @@
 </head>
 
 <body>
+
+    <input id="maths" placeholder="maths">
+    <input id="science" placeholder="science">
+    <input id="english" placeholder="english">
+    <button onclick="clkhandler()"> Get Total Marks</button> <br><br>
+    <input id="totalMarks" placeholder="Total Marks">
+    <input id="result" placeholder="Result">
+
+
     <script>
 
 
-        /* Student's Marksheet */
+        function clkhandler() {
+            
+           let num1 = parseInt(document.getElementById("maths").value);
+           let num2 = parseInt(document.getElementById("science").value);
+           let num3 = parseInt(document.getElementById("english").value);
+           let sum = num1 + num2 + num3;
+            // document.getElementById("totalMarks").value = sum;
+           let totalMarks = document.getElementById("totalMarks").value = sum;
 
-        console.log("Student's Marksheet");
-
-        /* We can check only result of any one person due to overwrite variable
-        Therefore need to check one by one */
-
-
-        // sonu = 35;
-        // console.log("Result of sonu => " + (getMarks = sonu));
-        
-        // soham = 65;
-        // console.log("Result of soham => " + (getMarks = soham));
-        
-        // john = 75;
-        // console.log("Result of john => " + (getMarks = john));
-        
-        vijay = 85;
-        console.log("Result of vijay => " + (getMarks = vijay));
-
-        if (getMarks >= 100) {
-            console.log("Invalid Value")
+            if (totalMarks >= 100) {
+    document.write("Invalid Value")
+    }
+    else if (totalMarks >= 70) {
+    document.write("Distriction")
+    }
+    else if (totalMarks >= 60) {
+    document.write("First-Class")
+    }
+    else if (totalMarks >= 50) {
+    document.write("Second-Class")
+    }
+    else if (totalMarks >= 35) {
+    document.write("Pass-Class")
+    }
+    else if (totalMarks >= 0) {
+    document.write("Fail")
+    }
+    else if (totalMarks <= 0) { 
+    document.write("Invalid Value") 
         }
-        else if (getMarks >= 70) {
-            console.log("Distriction")
-        }
-        else if (getMarks >= 60) {
-            console.log("First-Class")
-        }
-        else if (getMarks >= 50) {
-            console.log("Second-Class")
 
-        }
-        else if (getMarks >= 35) {
-            console.log("Pass-Class")
+        document.getElementById("result") ;
 
-        }
-        else if (getMarks >= 0) {
-            console.log("Fail")
-        }
-        else if (getMarks <= 0) {
-            console.log("Invalid Value")
-        };
+    }
+
+    // ========================================================================
+    /* Student's Marksheet */
+
+    // console.log("Student's Marksheet");
+
+    /* We can check only result of any one person due to overwrite variable
+    Therefore need to check one by one */
 
 
-    </script>
+
+
+    // vijay = 85;
+    // console.log("Result of vijay => " + (getMarks = vijay));
+
+    // if (getMarks >= 100) {
+    // console.log("Invalid Value")
+    // }
+    // else if (getMarks >= 70) {
+    // console.log("Distriction")
+    // }
+    // else if (getMarks >= 60) {
+    // console.log("First-Class")
+    // }
+    // else if (getMarks >= 50) {
+    // console.log("Second-Class")
+
+    // }
+    // else if (getMarks >= 35) {
+    // console.log("Pass-Class")
+
+    // }
+    // else if (getMarks >= 0) {
+    // console.log("Fail")
+    // }
+    // else if (getMarks <= 0) { // console.log("Invalid Value") // }; </script>
 </body>
 
 </html>
