@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-1 (Student's Marksheet)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: rgb(156, 189, 172);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: xx-large;
+      /* width: 50%; */
+    }
+
+    section {
+      border: 2px solid;
+      display: block;
+      margin: auto;}
+
+    .row{
+    /* border: 2px solid red; */
+    width: 50%;
+    margin: auto;
+
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      padding: 15px 0px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #9ad9f0;
+    }
+
+    #total,
+    #percentage {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+      color: blue;
+      /* width: 50%; */
+
+    }
+
+    #result {
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 20px;
+      color: rgb(19, 44, 19);
+      /* width: 50%; */
+    }
+
+    .btn {
+      /* width: 50%; */
+    }
+
+    button {
+      background-color: skyblue;
+      padding: 10px 50px;
+      display: block;
+      margin: auto;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="row">
+      <h1>Marksheet</h1>
+      <table>
+        <tr>
+          <th>Subject</th>
+          <th>Marks</th>
+        </tr>
+        <tr>
+          <td>Mathematics</td>
+          <td><input type="text" id="mathMarks" placeholder="Obtained Marks"></td>
+        </tr>
+        <tr>
+          <td>English</td>
+          <td><input type="text" id="engMarks" placeholder="Obtained Marks"></td>
+        </tr>
+        <tr>
+          <td>Science</td>
+          <td><input type="text" id="sciMarks" placeholder="Obtained Marks"></td>
+        </tr>
+        <tr>
+          <td>Hindi</td>
+          <td><input type="text" id="hinMarks" placeholder="Obtained Marks"></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <button onclick="calculateTotal()">Get Result</button>
+      </div>
+      <div id="total"></div>
+      <div id="percentage"></div>
+      <div id="result"></div>
+    </div>
+  </section>
+  <script>
+    function calculateTotal() {
+      var mathMarks = parseInt(document.getElementById('mathMarks').value);
+      var engMarks = parseInt(document.getElementById('engMarks').value);
+      var sciMarks = parseInt(document.getElementById('sciMarks').value);
+      var hinMarks = parseInt(document.getElementById('hinMarks').value);
+
+      var totalMarks = mathMarks + engMarks + sciMarks + hinMarks;
+      var percentage = (totalMarks / 400) * 100;
+      var result = '';
+
+      if (percentage >= 100) { result = 'Invalid Data' }
+      else if (percentage >= 75) { result = 'Distriction' }
+      else if (percentage >= 60) { result = 'First-Class' }
+      else if (percentage >= 35) { result = 'Second-Class' }
+      else { result = 'Fail' }
+
+      document.getElementById('total').innerHTML = 'Total Marks: ' + totalMarks;
+      document.getElementById('percentage').innerHTML = 'Percentage: ' + percentage + '%';
+      document.getElementById('result').innerHTML = 'Result: ' + result;
+    }
+  </script>
+</body>
+
+</html>
