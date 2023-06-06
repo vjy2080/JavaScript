@@ -23,12 +23,13 @@
     section {
       border: 2px solid;
       display: block;
-      margin: auto;}
+      margin: auto;
+    }
 
-    .row{
-    /* border: 2px solid red; */
-    width: 50%;
-    margin: auto;
+    .row {
+      /* border: 2px solid red; */
+      width: 50%;
+      margin: auto;
 
     }
 
@@ -79,6 +80,13 @@
       margin: auto;
       margin-top: 30px;
     }
+
+    .display {
+      height: 100px;
+      width: 200px;
+      border: 2px solid;
+      margin: auto;
+    }
   </style>
 </head>
 
@@ -111,9 +119,11 @@
       <div class="btn">
         <button onclick="calculateTotal()">Get Result</button>
       </div>
-      <div id="total"></div>
-      <div id="percentage"></div>
-      <div id="result"></div>
+      <!-- <div class="display"> -->
+        <div id="total"></div>
+        <div id="percentage"></div>
+        <div id="result"></div>
+      <!-- </div> -->
     </div>
   </section>
   <script>
