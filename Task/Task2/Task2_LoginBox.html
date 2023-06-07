@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Box</title>
+    <link rel="stylesheet" href="Task2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Login/Signup Here</h3>
+        <table>
+            <tr>
+                <td>
+                    <lable>Username</lable>
+                </td>
+                <td>
+
+                    <input type="text"  name="username" id="username">
+                    <span id="usernameerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <lable>Password</lable>
+                </td>
+                <td>
+                    <input type="password"  name="password" id="password">
+                    <span id="passworderror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable>Birth Date</lable>
+
+                </td>
+                <td>
+                    <input type="date"  name="birthdate" id="birthdate">
+                    <span id="birthdateerror"></span>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable>Phone No.</lable>
+
+                </td>
+                <td>
+                    <input type="number"  name="phone" id="phone">
+                    <span id="phoneerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable>Email</lable>
+
+                </td>
+                <td>
+                    <input type="email"  name="email" id="email">
+                    <span id="emailerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button onclick="login()">Login</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button>Sign-Up</button>
+                </td>
+            </tr>
+        </table>
+        <h4>Note:- Press F12 for get data in console</h4>
+    </div>
+
+   <script src="Task2.js"></script>
+</body>
+
+</html>
