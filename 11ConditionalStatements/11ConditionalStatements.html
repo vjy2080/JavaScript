@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="text-4-d61ba42f5c" class="cmp-text">
+        <p>Conditional statements control behavior in JavaScript and determine whether or not pieces of code can run.
+        </p>
+        <p><span style="	color: inherit;
+            font-family: inherit;
+        ">There are multiple different types of conditionals in JavaScript including:</span></p>
+        <ul>
+            <li>“If” statements: where if a condition is true it is used to specify execution for a block of code.</li>
+            <li><span id="docs-internal-guid-4fbf61b4-7fff-4561-575d-5f57c31631ec">“Else” statements: where if the same
+                    condition is false it specifies the execution for a block of code.</span><br>
+            </li>
+            <li><span id="docs-internal-guid-48d3a8f7-7fff-849f-e3a9-7c0f0ea8bef2">“Else if” statements: this specifies
+                    a new test if the first condition is false.</span></li>
+        </ul>
+        <p><span id="docs-internal-guid-0dd6779d-7fff-2c54-6257-522984801877">Now that you have the basic JavaScript
+                conditional statement definitions, let’s show you examples of each.</span></p>
+    </div>
+    <img width="500px" src="conditionalStatements.webp" alt="">
+    <img width="500px" src="conditionalStatementsExample.webp" alt="">
+    <img width="500px" src="Conditional_Statements.jpg" alt="">
+    <input type="text" name="marks" id="marks1">
+    <input type="text" name="marks2" id="marks2">
+    <button id="btn">Get Result</button>
+    <script>
+
+        document.getElementById("btn").addEventListener("click", function () {
+            marks1 = document.getElementById("marks1").value
+            marks2 = document.getElementById("marks2").value
+            console.log(typeof marks1);
+            marks = parseFloat(marks1)+ parseInt(marks2) 
+            
+            console.log(marks);
+            if (marks >= 0 && marks <= 100) {
+                if (marks >= 50 && marks < 60) {
+                    console.log("pass class");
+                } else if (marks >= 60 && marks < 70) {
+                    console.log("second class");
+                } else if (marks >= 70 && marks < 80) {
+                    console.log("first class");
+                } else if (marks >= 80 && marks < 90) {
+                    console.log("dist");
+                } else if (marks >= 90 && marks <= 100) {
+                    console.log("dist +");
+                } else {
+                    console.log("try again");
+                }
+            } else {
+                console.log("Invalid marks");
+            }
+        })
+
+        // let marks =75
+
+        // Simple if START
+        // if (marks >= 50) {
+        //     console.log("pass");
+        // }
+        // Simple if END
+
+        // if...else START
+        // if (marks >= 50) {
+        //     console.log("pass");
+        // }else{
+        //     console.log("try again");
+        // }
+        // if...else END
+
+        // // if...else...if START
+        // if (marks >= 50 && marks < 60) {
+        //     console.log("pass class");
+        // }else if (marks >= 60 && marks < 70) {
+        //     console.log("second class");
+        // }else if (marks >= 70 && marks < 80) {
+        //     console.log("first class");
+        // }else if (marks >= 80 && marks < 90) {
+        //     console.log("dist");
+        // }else if (marks >= 90 && marks <= 100) {
+        //     console.log("dist +");
+        // }else{
+        //     console.log("try again");
+        // }
+        // // if...else...if END
+
+
+        // nested Condition if inside if START
+        // if (marks >= 0 && marks <= 100) {
+        //     if (marks >= 50 && marks < 60) {
+        //         console.log("pass class");
+        //     }else if (marks >= 60 && marks < 70) {
+        //         console.log("second class");
+        //     }else if (marks >= 70 && marks < 80) {
+        //         console.log("first class");
+        //     }else if (marks >= 80 && marks < 90) {
+        //         console.log("dist");
+        //     }else if (marks >= 90 && marks <= 100) {
+        //         console.log("dist +");
+        //     }else{
+        //         console.log("try again");
+        //     }
+        // }else{
+        //     console.log("Invalid marks");
+        // }
+
+        // nested Condition if inside if END
+
+
+        day = "Mon"
+        switch (day) {
+            case "Mon":
+                console.log("Monday");
+                break;
+            case "Fri":
+                console.log("Friday");
+                break;
+        
+            default:
+                break;
+        }
+    </script>
+
+</body>
+
+</html>

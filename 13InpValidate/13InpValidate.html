@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" onblur="checkrequired()" name="username" id="username">
+    <span id="usernameerror"></span>
+    <script>
+        function checkrequired() {
+            // console.log(this);
+            let uname = document.getElementById("username").value
+            console.log("inp data",uname);
+            if (uname == "") {
+                document.getElementById("usernameerror").innerText = "This filed is required"
+            } else {
+                document.getElementById("usernameerror").innerText = ""
+            }
+        }
+    </script>
+
+</body>
+</html>

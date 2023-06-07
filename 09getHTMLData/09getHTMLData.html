@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="inp-name" class="inp-class" id="inp-id">
+    <input type="text" name="pass" class="inp-class" id="inp-id1">
+    <input type="text" name="other" class="inp-class" id="inp-id2">
+    <input type="text" name="blur" onblur="getdata(this)" placeholder="this " class="inp-class" id="inp-id2">
+	<!-- <input type="button" onclick="clkhandle()" value="click" name="btn" id="btn"> -->
+	<input type="button" value="click" name="btn" id="btn">
+	<!-- <div id="disp">
+
+	</div> -->
+
+<script>
+
+	function getdata(anything) {
+		console.log(anything);
+	}
+
+// EventHandler START
+// Custom Function (UDF => user definded function)
+// function clkhandle() {
+// 	console.log("called");
+// 	// let InpData = document.getElementById("inp-id")
+// 	// console.log(InpData);
+// }
+// EventHandler END
+
+
+// EventListener START
+
+document.getElementById("btn").addEventListener("click",function () {
+	// console.log("called");
+	// let InpData = document.getElementById("inp-id")
+	// console.log(InpData);
+	// console.log(InpData.value);
+	// let InpData = document.getElementById("inp-id").value
+	// console.log(InpData);
+	// let InpData = document.getElementsByClassName("inp-class") //HTMLCollection 
+	// console.log(InpData);
+	// console.log(InpData[0]);
+	// console.log(InpData[0].value);
+	// console.log(InpData);
+	// console.log(InpData[2]);
+	// console.log(InpData[2].value);
+	// let InpData = document.getElementsByName("inp-name") //NodeList 
+	// console.log(InpData);
+	// console.log(InpData[0]);
+	// let InpData = document.getElementsByTagName("input") //HTMLCollection
+	// console.log(InpData);
+	// console.log(InpData[0]);
+	// console.log(InpData[0].value);
+	// let InpData = document.querySelector("input") //HTMLCollection
+	// console.log(InpData);
+	// console.log(InpData.value);
+	// let InpData = document.querySelector(".inp-class") //HTMLCollection
+	// let InpData = document.querySelector("#inp-id") //HTMLCollection
+	// let InpData = document.querySelectorAll("#inp-id") //HTMLCollection
+	// console.log(InpData);
+	// console.log(InpData[0]);
+	// console.log(InpData[0].value);
+	let InpData = document.querySelectorAll(".inp-class") //HTMLCollection
+	console.log(InpData);
+	console.log(InpData[0]);
+	console.log(InpData[0].value);
+
+})
+
+// EventListener END
+
+// document.getElementById("disp").innerText = '<input type="text" name="" id="">'
+// document.getElementById("disp").innerHTML = '<input type="text" name="" id="">'
+
+</script>
+</body>
+</html>
