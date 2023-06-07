@@ -1,0 +1,40 @@
+* {
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 2.5;
+}
+
+body {
+    height: 1500px;
+    background: rgb(250, 200, 93);
+    background: linear-gradient(180deg, rgb(250, 200, 93, 1) 0%, rgba(187, 252, 173, 1) 50%, rgba(250, 200, 93, 1) 100%);
+}
+
+h3 {
+    color: red;
+    font-size: 30px;
+}
+
+p,
+ul {
+    color: blue;
+    font-size: 20px;
+}
+
+ol {
+    color: green;
+}
+
+ul[type=square] {
+    color: blueviolet;
+}
+td,th,table {
+    border: 5px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    color: blue;
+    text-decoration: underline;
+    font-size: large;
+}

@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Practical Of Operator Opration</title>
 </head>
+
 <body>
     <h1>Please open "console" in "inspect" or press "F12" key</h1>
 
-    
+
     <script>
 
         let x = 3;
-        console.log(x == 3);
-        console.log(x === 3);
-        console.log(x === "3");
-        console.log(x == "3");
-        console.log(x !== "3");
-        console.log(typeof "x");
-        x+=5 // x = x+5
-        console.log(x);
-// const y = ++x;
-console.log(515%3);
-const y = x++;
-console.log("value of x :", x); 
-console.log("value of y :", y);
+        console.log("value of x :", x);
+        console.log("value of x == 3 :", x == 3);
+        console.log("value of x === 3 :", x === 3);
+        console.log('value of x === "3" :', x === "3");
+        console.log('value of x == "3" :', x == "3");
+        console.log('value of x !== "3" :', x !== "3");
+        console.log('typeof "x" => ' + typeof "x");
 
-b = x;
+        let v = 2;
+        console.log("value of v :", v);
+        v += 5
+        console.log("value of v+=5 :", v);
 
-console.log("value of b :", b);
-// x is 4; y is 3
+        let z = 4;
+        console.log("value of z :", z);
+        z = z + 5
+        console.log("value of z=z+5 :", z);
+
+        console.log("value of x :", x);
+
+        let c = ++x;
+        console.log("value of c = ++x :", c);
+        console.log("value of x :", x);
 
 
-        // a = 50;
-        // console.log("After declaration",a);
-        // a++
-        // console.log("Post Increment",a);
-        // a++
-        // console.log("Pre-increment",a);
-        // b = a
-        // console.log("assignemnt",b);
-        // // for (var index = 0; index < 10; ++index) {
-        // for (var index = 0; index < 10; index++) {
-        // // for (let index = 0; index < 10; index++) {
-        //     console.log(index);
-        //     console.log(index++);
-        // }
-        // console.log(index);
-        // // a++
-        // ++a
-        // console.log(a);
+        let y = x++;
+        console.log("value of y = x++ :", y);
+        console.log("value of x :", x);
+        let b = x;
+        console.log("value of b = x :", b);
+
+
+        console.log("==================================");
+
+        a = 50;
+        console.log("After declaration value of 'a'",a);
+        a++
+        console.log("Post Increment value of 'a++'",a);
+        a++
+        console.log("Pre-increment value of 'a++'",a);
+        a+++
+        console.log("Pre-increment value of 'a+++'",a);
+        a+
+        console.log("Pre-increment value of 'a+'",a);
+
+        b = a
+        console.log("assignemnt 'b=a'",b);
+
+        
     </script>
 
 </body>
+
 </html>
