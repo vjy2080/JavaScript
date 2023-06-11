@@ -46,3 +46,5 @@ function login() {
     }
 
 }
+
+function Blur() {}

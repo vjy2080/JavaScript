@@ -4,39 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Get HTML Data</title>
 	<link rel="stylesheet" href="../AllStyleSheet/CommonIntro.css">
 </head>
 <body>
-    <input type="text" name="inp-name" class="inp-class" id="inp-id">
-    <input type="text" name="pass" class="inp-class" id="inp-id1">
+    <input type="text"  name="inp-name" class="inp-class" id="inp-id">
+    <input type="text"  name="pass" class="inp-class" id="inp-id1">
     <input type="text" name="other" class="inp-class" id="inp-id2">
-    <input type="text" name="blur" onblur="getdata(this)" placeholder="this " class="inp-class" id="inp-id2">
+    <!-- <input type="text" name="blur" onblur="getdata(this)" placeholder="this " class="inp-class" id="inp-id2"> -->
 	<!-- <input type="button" onclick="clkhandle()" value="click" name="btn" id="btn"> -->
-	<input type="button" value="click" name="btn" id="btn">
+	<input type="button"  onblur="Blur()" value="click" name="btn" id="btn">
 	<!-- <div id="disp">
 
 	</div> -->
 
 <script>
 
-	function getdata(anything) {
-		console.log(anything);
-	}
+	// function getdata(anything) {
+	// 	console.log(anything);
+	// }
 
 // EventHandler START
 // Custom Function (UDF => user definded function)
 // function clkhandle() {
-// 	console.log("called");
-// 	// let InpData = document.getElementById("inp-id")
-// 	// console.log(InpData);
+// 	// console.log("called");
+// 	let InpData = document.getElementById("inp-id").value
+// 	let InpData1 = document.getElementById("inp-id1").value
+// 	let InpData2 = document.getElementById("inp-id2").value
+// 	let sumOfInpData = (InpData + InpData1 + InpData2 );
+// 	console.log(sumOfInpData);
+// function Blur() {
+// 	// console.log("called");
+// 	let InpData = document.getElementById("inp-id").value
+// 	console.log(InpData);
+// 	let InpData1 = document.getElementById("inp-id1").value
+// 	console.log(InpData1);
+// 	let InpData2 = document.getElementById("inp-id2").value
+// 	console.log(InpData2);
+
 // }
+
+function Blur() {
+	// console.log("called");
+	let InpData = document.getElementById("inp-id").value
+	console.log(InpData);
+	let InpData1 = document.getElementById("inp-id1").value
+	console.log(InpData1);
+	let InpData2 = document.getElementById("inp-id2").value
+	console.log(InpData2);
+
+}
+
+
+
 // EventHandler END
 
 
 // EventListener START
 
-document.getElementById("btn").addEventListener("click",function () {
+// document.getElementById("btn").addEventListener("click",function () {
 	// console.log("called");
 	// let InpData = document.getElementById("inp-id")
 	// console.log(InpData);
@@ -66,12 +92,12 @@ document.getElementById("btn").addEventListener("click",function () {
 	// console.log(InpData);
 	// console.log(InpData[0]);
 	// console.log(InpData[0].value);
-	let InpData = document.querySelectorAll(".inp-class") //HTMLCollection
-	console.log(InpData);
-	console.log(InpData[0]);
-	console.log(InpData[0].value);
+// 	let InpData = document.querySelectorAll(".inp-class") //HTMLCollection
+// 	console.log(InpData);
+// 	console.log(InpData[0]);
+// 	console.log(InpData[0].value);
 
-})
+// })
 
 // EventListener END
 

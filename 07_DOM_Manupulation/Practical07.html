@@ -16,15 +16,23 @@
         document.getElementById("btn").addEventListener("click",function (params) {
             // console.log("Called");
             let passData = document.getElementById("password")
-            console.log(passData.type);
+            // console.log(passData.type);
             if (passData.type == "password") {
                 // console.log("Inp Pass");
                 passData.type = "text"
-            }else{
+            }else{ 
                 passData.type = "password"
             }
             document.getElementById("display").innerHTML = "Password type is => " + passData.type;
         })
+      
+          
+           
+            
+
+       
+
+
     </script>
 </body>
 </html>
