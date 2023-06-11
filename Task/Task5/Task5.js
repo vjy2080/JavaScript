@@ -9,7 +9,7 @@ inputData.forEach(element => {
 
         // console.log(newDiv);
         // console.log(this.value);
-        console.log("this.nextSibling", this.nextSibling.nodeName);
+        // console.log("this.nextSibling", this.nextSibling.nodeName);
 
         if (this.value == "") {
             if (this.nextSibling && this.nextSibling.nodeName == "SPAN") {
