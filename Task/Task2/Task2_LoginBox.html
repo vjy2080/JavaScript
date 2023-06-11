@@ -18,8 +18,7 @@
                     <lable>Username</lable>
                 </td>
                 <td>
-
-                    <input type="text" onblur='checkrequire(this,"usernameerror")'  name="username" id="username">
+                    <input type="text" onblur="check(this,'usernameerror')" name="username" id="username">
                 </td>
             </tr>
             <tr>
@@ -28,7 +27,7 @@
                     <lable>Password</lable>
                 </td>
                 <td>
-                    <input type="password" onblur='checkrequire(this,"passworderror")' name="password" id="password">
+                    <input type="password" onblur="check(this,'passworderror')" name="password" id="password">
                 </td>
             </tr>
             <tr>
@@ -37,7 +36,7 @@
 
                 </td>
                 <td>
-                    <input type="date" onblur='checkrequire(this,"birthdateerror")' name="birthdate" id="birthdate">
+                    <input type="date" onblur="check(this,'birthdateerror')" name="birthdate" id="birthdate">
 
                 </td>
             </tr>
@@ -47,7 +46,7 @@
 
                 </td>
                 <td>
-                    <input type="tel" onblur='checkrequire(this,"phoneerror")' name="phone" id="phone">
+                    <input type="tel" onblur="check(this,'phoneerror')" name="phone" id="phone">
                 </td>
             </tr>
             <tr>
@@ -56,7 +55,7 @@
 
                 </td>
                 <td>
-                    <input type="email" onblur='checkrequire(this,"emailerror")' name="email" id="email">
+                    <input type="email" onblur="check(this,'emailerror')" name="email" id="email">
                 </td>
             </tr>
             <tr>
@@ -77,7 +76,7 @@
         <h4>Note:- Press F12 for get data in console</h4>
     </div>
 
-   <script src="Task2.js"></script>
+    <script src="Task2.js"></script>
 </body>
 
 </html>

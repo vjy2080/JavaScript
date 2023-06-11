@@ -1,9 +1,7 @@
-function checkrequire(parameter,spanid){
-    if (parameter == "") {
-        console.log("Not okay");
-        // document.getElementById(spanid).innerText="This Field is required"
+function check(para, spanid) {
+       if (para.value == "") {
+        document.getElementById(spanid).innerHTML="<b>This field is required</b>"
     } else {
-        console.log("okay");
-        // document.getElementById(spanid).innerText=""
-    }
+           document.getElementById(spanid).innerHTML="<b></b>"
+       }
 }

@@ -6,19 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" onblur="Blur()" name="inp-name" class="inp-class" id="inp-id">
-    <input type="text" onblur="Blur()" name="pass" class="inp-class" id="inp-id1">
-    <input type="text" onmouseenter="MouseEvent()" name="other" class="inp-class" id="inp-id2">
+    <input type="text" onblur="check(this, 'user')" />
 
-    <script>
-        function Blur() {
-	console.log("called");
-// 	let InpData = document.getElementById("inp-id").value
-// 	let InpData1 = document.getElementById("inp-id1").value
-// 	let InpData2 = document.getElementById("inp-id2").value
-// 	let sumOfInpData = (InpData + InpData1 + InpData2 );
-// 	console.log(sumOfInpData);
-}
-    </script>
+<script>
+function check(element, type) {
+  // Get the value entered by the user
+  var value = element.value;
+  
+  console.log(value)}
+</script>
+
 </body>
 </html>
