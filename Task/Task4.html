@@ -2,101 +2,75 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Box</title>
-    <link rel="stylesheet" href="Task2/Task2.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Test</title>
+   <link rel="stylesheet" href="Task4.css">
 </head>
 
 <body>
-    <div class="container">
-        <h3>Login/Signup Here</h3>
-        <table>
+   <div class="container">
+      <h3>Login/Signup Here</h3>
+      <form id="myform">
+         <table>
             <tr>
-                <td>
-                    <lable>Username</lable>
-                </td>
-                <td>
-                    <input type="text" name="username" id="username">
-                </td>
+               <td>
+                  <label>Username</label>
+               </td>
+               <td>
+                  <input type="text" name="username" id="username" onblur="req(this)">
+               </td>
             </tr>
             <tr>
-                <td>
-
-                    <lable>Password</lable>
-                </td>
-                <td>
-                    <input type="password" name="password" id="password">
-                </td>
+               <td>
+                  <label>Password</label>
+               </td>
+               <td>
+                  <input type="password" name="password" id="password" onblur="req(this)">
+               </td>
             </tr>
             <tr>
-                <td>
-                    <lable>Birth Date</lable>
-
-                </td>
-                <td>
-                    <input type="date" name="birthdate" id="birthdate">
-
-                </td>
+               <td>
+                  <label>Birth Date</label>
+               </td>
+               <td>
+                  <input type="date" name="birthdate" id="birthdate" onblur="req(this)">
+               </td>
             </tr>
             <tr>
-                <td>
-                    <lable>Phone No.</lable>
-
-                </td>
-                <td>
-                    <input type="tel" name="phone" id="phone">
-                </td>
+               <td>
+                  <label>Phone No.</label>
+               </td>
+               <td>
+                  <input type="tel" name="phone" id="phone" onblur="req(this)">
+               </td>
             </tr>
             <tr>
-                <td>
-                    <lable>Email</lable>
-
-                </td>
-                <td>
-                    <input type="email" name="email" id="email">
-                </td>
+               <td>
+                  <label>Email</label>
+               </td>
+               <td>
+                  <input type="email" name="email" id="email" onblur="req(this)">
+               </td>
             </tr>
             <tr>
-                <td>
-                </td>
-                <td>
-                    <button>Login</button>
-                </td>
+               <td></td>
+               <td>
+                  <button>Login</button>
+               </td>
             </tr>
             <tr>
-                <td>
-                </td>
-                <td>
-                    <button>Sign-Up</button>
-                </td>
+               <td></td>
+               <td>
+                  <button>Sign-Up</button>
+               </td>
             </tr>
-        </table>
-        <h4>Note:- Press F12 for get data in console</h4>
-    </div>
-
-    <script>
-// document.getElementById("myform").addEventListener("submit",(e) => {
-//     e.preventDefault();
-//     console.log("called");
-// })
-function req(e){
-    if(e.value == ""){
-        let p = document.createElement("p");
-        console.log(p);
-        const newtext = document.createTextNode("This field is required");
-        p.appendChild(newtext);
-        console.log(e.nextSibling.nodeName);
-        if (e.nextSibling.nodeName == "p") {
-            e.nextSibling.remove()
-        } else {
-            e.after(p)
-        }
-    }
-}
-
-    </script>
+         </table>
+      </form>
+      <h4>Note:- Press F12 for get data in console</h4>
+   </div>
+   <script src="Task4.js"></script>
 </body>
 
 </html>
