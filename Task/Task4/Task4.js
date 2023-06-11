@@ -8,7 +8,7 @@ document.getElementById("myform").addEventListener("submit", (e) => {
        let span = document.createElement("span");
        const newtext = document.createTextNode("This field is required");
        span.appendChild(newtext);
-       if (e.nextSibling.nodeName == "span") {
+       if (e.nextSibling.nodeName == "newtext") {
           e.nextSibling.remove();
        } else {
           e.after(span);
