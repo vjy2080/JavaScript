@@ -19,8 +19,7 @@
                 </td>
                 <td>
 
-                    <input type="text" onblur="Blur"  name="username" id="username">
-                    <span id="usernameerror"></span>
+                    <input type="text" onblur='checkrequire(this,"usernameerror")'  name="username" id="username">
                 </td>
             </tr>
             <tr>
@@ -29,8 +28,7 @@
                     <lable>Password</lable>
                 </td>
                 <td>
-                    <input type="password" onblur="Blur" name="password" id="password">
-                    <span id="passworderror"></span>
+                    <input type="password" onblur='checkrequire(this,"passworderror")' name="password" id="password">
                 </td>
             </tr>
             <tr>
@@ -39,8 +37,7 @@
 
                 </td>
                 <td>
-                    <input type="date" onblur="Blur" name="birthdate" id="birthdate">
-                    <span id="birthdateerror"></span>
+                    <input type="date" onblur='checkrequire(this,"birthdateerror")' name="birthdate" id="birthdate">
 
                 </td>
             </tr>
@@ -50,8 +47,7 @@
 
                 </td>
                 <td>
-                    <input type="number" onblur="Blur" name="phone" id="phone">
-                    <span id="phoneerror"></span>
+                    <input type="tel" onblur='checkrequire(this,"phoneerror")' name="phone" id="phone">
                 </td>
             </tr>
             <tr>
@@ -60,8 +56,7 @@
 
                 </td>
                 <td>
-                    <input type="email" onblur="Blur" name="email" id="email">
-                    <span id="emailerror"></span>
+                    <input type="email" onblur='checkrequire(this,"emailerror")' name="email" id="email">
                 </td>
             </tr>
             <tr>
