@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .effect{
+            background-color: teal;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="para" class="effect">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem distinctio eos deserunt harum vel? Unde neque tenetur laboriosam sed, soluta, sapiente repellendus itaque numquam aspernatur, illo facere expedita. Amet, officia.</p>
+    <button id="btn">Click</button>
+    <script>
+        document.getElementById("btn").addEventListener("click",function () {
+            // console.log("called");
+            // let ClassListdata= document.getElementById("para").classList
+            // console.log( document.getElementById("para").classList.contains("effect"))
+            // console.log(ClassListdata);
+            
+            if (document.getElementById("para").classList.contains("effect")) {
+                document.getElementById("para").classList.remove('effect')
+            } else {
+                document.getElementById("para").classList.add('effect')
+            }
+        })
+    </script>
+</body>
+</html>

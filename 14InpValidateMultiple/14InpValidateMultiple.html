@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Box</title>
+    <!-- <link rel="stylesheet" href="Task2.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <h3>Login/Signup Here</h3>
+        <table>
+            <tr>
+                <td>
+                    <lable>Username</lable>
+                </td>
+                <td>
+
+                    <input type="text" onblur="gmete(this,'usernameerror')" name="username" id="username">
+                    <span id="usernameerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <lable>Password</lable>
+                </td>
+                <td>
+                    <input type="password" onblur="gmete(this,'passworderror')" name="password" id="password">
+                    <span id="passworderror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable>Birth Date</lable>
+
+                </td>
+                <td>
+                    <input type="date" onblur="gmete(this,'birthdateerror')" name="birthdate" id="birthdate">
+                    <span id="birthdateerror"></span>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable>Phone No.</lable>
+
+                </td>
+                <td>
+                    <input type="number" onblur="gmete(this,'phoneerror')" name="phone" id="phone">
+                    <span id="phoneerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable>Email</lable>
+
+                </td>
+                <td>
+                    <input type="email" onblur="gmete(this,'emailerror')" name="email" id="email">
+                    <span id="emailerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button onclick="login()">Login</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button>Sign-Up</button>
+                </td>
+            </tr>
+        </table>
+        <h4>Note:- Press F12 for get data in console</h4>
+    </div>
+    <!-- <b>This field is required</b> -->
+   <script>
+    // function gmete(e) {
+    // function gmete(event) {
+    // function gmete(element) {
+    function gmete(kuchbhi,spnid) {
+        // console.log("this",this);
+        // console.log(kuchbhi);   
+        // console.log(kuchbhi.value);
+        if (kuchbhi.value == "") {
+            document.getElementById(spnid).innerHTML="<b>This field is required</b>"
+            // document.getElementById(spnid).innerText="<b>This field is required</b>"
+        } else {
+            document.getElementById(spnid).innerHTML=""
+            
+        }   
+    }
+   </script>
+</body>
+
+</html>

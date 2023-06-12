@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">Click</button>
+    <div id="dips"></div>
+    <script>
+        document.getElementById("btn").addEventListener("click",function () {
+            console.log("called");
+            const newDiv = document.createElement("p");
+            const pText = document.createTextNode("jo content add krne hai vo");
+
+            console.log("div",newDiv);
+            console.log("pText",pText);
+            // newDiv.append("pText")
+            newDiv.appendChild(pText)
+            console.log("p",newDiv);
+            const currentDiv = document.getElementById("dips");
+            currentDiv.appendChild(newDiv)
+            // currentDiv.innerHTML=newDiv
+            // currentDiv.innerHTML="<div>testing</div>"
+        })
+    </script>
+
+</body>
+</html>

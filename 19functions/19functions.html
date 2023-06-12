@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a
+        procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a
+        function, it should take some input and return an output where there is some obvious relationship between the
+        input and the output. To use a function, you must define it somewhere in the scope from which you wish to call
+        it.</p>
+    <pre>
+            eval()
+            The eval() method evaluates JavaScript code represented as a string.
+
+            isFinite()
+            The global isFinite() function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.
+
+            isNaN()
+            The isNaN() function determines whether a value is NaN or not. Note: coercion inside the isNaN function has interesting rules; you may alternatively want to use Number.isNaN() to determine if the value is Not-A-Number.
+
+            parseFloat()
+            The parseFloat() function parses a string argument and returns a floating point number.
+
+            parseInt()
+            The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
+
+            decodeURI()
+            The decodeURI() function decodes a Uniform Resource Identifier (URI) previously created by encodeURI or by a similar routine.
+
+            decodeURIComponent()
+            The decodeURIComponent() method decodes a Uniform Resource Identifier (URI) component previously created by encodeURIComponent or by a similar routine.
+
+            encodeURI()
+            The encodeURI() method encodes a Uniform Resource Identifier (URI) by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).
+
+            encodeURIComponent()
+            The encodeURIComponent() method encodes a Uniform Resource Identifier (URI) component by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).
+
+            escape()
+            The deprecated escape() method computes a new string in which certain characters have been replaced by a hexadecimal escape sequence. Use encodeURI or encodeURIComponent instead.
+
+            unescape()
+            The deprecated unescape() method computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like escape. Because unescape() is deprecated, use decodeURI() or decodeURIComponent instead.
+        </pre>
+    <script>
+        console.log("type...");
+        function addition() {
+            let a = 50
+            let b = 50;
+            let sum = 0
+            sum = a + b; // 5000 line code logic
+            return sum
+        }
+        let functionres = addition(); // one line function calling 
+        console.log(functionres); // logged the function response
+        console.log(addition()); // one line function calling and print the response
+        console.log(addition()); // one line function calling and print the response
+        console.log(addition()); // one line function calling and print the response
+        console.log(addition()); // one line function calling and print the response
+        // sum = a+b; // 5000 line code logic
+        // sum = a+b; // 5000 line code logic
+        // sum = a+b; // 5000 line code logic
+        // sum = a+b; // 5000 line code logic
+
+        // User Defineded Dymanic function with Para 
+        function addition_para(a, b = 0) { // a,b is the parameters for addition_para 
+            // let a = 50
+            // let b = 50;
+            // let sum = 0
+            sum = a + b; // 5000 line code logic
+            return sum
+        }
+        console.log(addition_para(51, 54)); // 51,54 is argument for the addition_para function 
+        console.log(addition_para(51, 654)); // one line function calling and print the response
+        console.log(addition_para(518, 87)); // one line function calling and print the response
+        console.log(addition_para(517, 323)); // one line function calling and print the response
+        console.log(addition_para(517)); // one line function calling and print the response
+
+
+        // if (Marks > 50) {
+        //     console.log("if called");
+        // }else{
+        //     console.log("else called");
+        // }
+        //  (condition) ? true block : false block
+        //  (Marks > 50) ? console.log("if called") : console.log("else called");
+
+
+        const factorial = function fac(n) {
+            console.log(n);
+            return n < 2 ? 1 : n * fac(n - 1);
+        };
+        console.log("factirial ", factorial(5));
+
+        function recfuc(n) {
+            if (n < 2) {
+                return 1
+            } else {
+                return n * recfuc(n - 1)
+            }
+        }
+        console.log(recfuc(5));
+
+
+        // anonymous
+        const accessfunction = function (params) {
+            return "data"
+        }
+    </script>
+</body>
+
+</html>

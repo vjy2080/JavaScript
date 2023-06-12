@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Box</title>
+    <!-- <link rel="stylesheet" href="Task2.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <h3>Login/Signup Here</h3>
+        <table>
+            <tr>
+                <td>
+                    <lable>Username</lable>
+                </td>
+                <td>
+
+                    <input type="text" name="username" id="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <lable>Password</lable>
+                </td>
+                <td>
+                    <input type="password" name="password" id="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable>Birth Date</lable>
+
+                </td>
+                <td>
+                    <input type="date" name="birthdate" id="birthdate">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable>Phone No.</lable>
+
+                </td>
+                <td>
+                    <input type="number" name="phone" id="phone">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable>Email</lable>
+
+                </td>
+                <td>
+                    <input type="email" name="email" id="email">
+                    <span id="emailerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button onclick="login()">Login</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button>Sign-Up</button>
+                </td>
+            </tr>
+        </table>
+        <h4>Note:- Press F12 for get data in console</h4>
+    </div>
+    <!-- <b>This field is required</b> -->
+   <script>
+    InputsData = document.querySelectorAll('input')
+    // console.log(InputsData);
+    InputsData.forEach(element => {
+        // console.log(element);
+        element.addEventListener("blur",function () {
+            const newDiv = document.createElement("span");
+        const pText = document.createTextNode("This field is required");
+        newDiv.appendChild(pText);
+
+        // console.log(newDiv);
+        // console.log(this.value);
+        // console.log("this.nextSibling", this.nextSibling.nodeName);
+
+        if (this.value == "") {
+            if (this.nextSibling && this.nextSibling.nodeName !== "SPAN"){
+                this.after(newDiv);
+            }
+        } else {
+            if (this.nextSibling && this.nextSibling.nodeName == "SPAN") {
+                this.nextSibling.remove();
+            }
+        }
+            // console.log("called",this.value);
+            // const newDiv = document.createElement("span");
+            // const pText = document.createTextNode("This field is Required");
+            // newDiv.appendChild(pText)
+            // console.log("this.nextSibling",this.nextSibling);
+            // if (this.value == "") {
+            //     console.log(this.nextSibling.nodeName);
+            //     if (this.nextSibling.nodeName == "SPAN") {
+            //         this.nextSibling.remove()
+            //     }else{
+            //         this.after(newDiv)
+            //     }
+            //     // this.nextSibling
+            // } else {
+                
+            // }
+
+        })
+    });
+   </script>
+</body>
+
+</html>
