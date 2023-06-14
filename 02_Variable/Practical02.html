@@ -14,59 +14,59 @@
     <script>
 
         // It's a wrog way to write JS
-        
-        50+50;
+
+        50 + 50;
         "50+50";
-        (50+50);
+        (50 + 50);
 
         // ========================================
-        
+
         // We can write like this but it's not recommanded
 
-        console.log(50+50);
+        console.log(50 + 50);
 
         // We need to declare a variable as follow
 
         // Used "var" Keyword to declare variable
-        
+
         var variablename = "value";
         console.log("variablename =>", variablename);
-        
-// Used "direct" Keyword to declare variable it's work same as "var"
 
-variable_name = "variable_name"
+        // Used "direct" Keyword to declare variable it's work same as "var"
+
+        variable_name = "variable_name"
         console.log(variable_name);
 
         // Used "let" Keyword to declare variable
-        
+
         let variable_let_name = "variable_let_name"
         console.log("variable_let_name => ", variable_let_name);
 
         // Used "const" Keyword to declare variable
-        
+
         const variable_const_name = "variable_const_name"
         console.log("variable_const_name =>", variable_const_name);
-        
-        
+
+
 
         //We will check variable and understand how to work it.
 
         // ======This is the variable example of "var"======
 
-        // => declaration with integer value 
+        // => declaration with integer value
 
-        // var variablewithvar = "var keyword varaible" 
-        // console.log(variablewithvar); 
+        var variablewithvar = "var keyword varaible"
+        console.log("variablewithvar => ", variablewithvar);
 
-        // => re- declaration with val 
+        // => re- declaration with val
 
-        // var variablewithvar = "var keyword varaible redeclaration"
-        // console.log(variablewithvar);
+        var variablewithvar = "var keyword varaible redeclaration"
+        console.log("variablewithvar => ", variablewithvar);
 
-        // => re-assignement 
+        // => re-assignement
 
-        // variablewithvar = "Let keyword varaible new value loosely type lang."
-        // console.log(variablewithvar);
+        variablewithvar = "var keyword varaible re-assignement"
+        console.log("variablewithvar => ", variablewithvar);
 
 
         /* We will found variable with var keyword can possible re-declaration and re-assignment */
@@ -80,30 +80,30 @@ variable_name = "variable_name"
 
         // => declaration with integer value
 
-        // let variablewithlet = "Let keyword varaible" 
+        let variablewithlet = "Let keyword varaible"
+        console.log(variablewithlet);
+
+        // => re-declaration with integer value
+
+        // Found this error : Identifier 'variablewithlet' has already been declared
+
+        // let variablewithlet = "Let keyword varaible"
         // console.log(variablewithlet);
 
-        // => re-declaration with integer value 
 
-        // Found this error : Identifier 'variablewithlet' has already been declared 
-
-        // let variablewithlet = "Let keyword varaible" 
-        // console.log(variablewithlet);
-
-
-        // re-assignement 
-        // variablewithlet = "Let keyword varaible new value loosely type lang." 
-        // console.log(variablewithlet);
+        // re-assignement
+        variablewithlet = "Re-assignement of Let keyword varaible new value loosely type lang."
+        console.log(variablewithlet);
 
         // ======== This is the variable example of "const" ==========
 
 
-        // => declaration with integer value 
+        // => declaration with integer value
 
-        // const constantData = "constant Data" 
-        // console.log(constantData); 
+        const constantData = "constant Data"
+        console.log(constantData);
 
-        // => re-declaration with val 
+        // => re-declaration with val
         // Found this error : Identifier 'constantData' has already been declared
 
         // const constantData = "constantData"
@@ -113,22 +113,23 @@ variable_name = "variable_name"
         // Found this error : Uncaught TypeError: Assignment to constant variable.
 
 
-        // constantData = "constantData" 
+        // constantData = "constantData"
         // console.log(constantData);
 
-        // Example of variable 
+        // Example of variable
 
-        // for (let index = 0; index < 5; index++) {
-        // console.log("inside Loop",index);
-        // }
-        // console.log("Outside ",index);
+        for (let index = 0; index < 5; index++) {
+        console.log("inside Loop",index);
+        }
 
         // Found this error : Uncaught ReferenceError: index is not defined
+        // console.log("Outside ",index);
 
-        // for (var index = 0; index < 5; index++) {
-            // console.log("inside Loop", index);
-        // }
-        // console.log("Outside ", index);
+
+        for (var index = 0; index < 5; index++) {
+            console.log("inside Loop", index);
+        }
+        console.log("Outside ", index);
 
 
     </script>
