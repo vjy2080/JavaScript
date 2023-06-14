@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider-img{
+            width: 500px;
+        }
+        .slider-effect{
+            animation: slider-animation-effect 5s ease forwards;
+            transition: all;
+        }
+        @keyframes slider-animation-effect {
+            0%{ transform: translate(-50%); }
+            50%{ transform: translate(0%);}
+
+            100%{transform: translate(50%);}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider">
+        <div class="slider-img-container">
+            <img class="slider-img" src="../Images/Logical+Comparison+Operators.jpg" alt="">
+        </div>
+        
+        <div class="slider-img-container">
+
+            <img class="slider-img" src="../Images/Programming-languages-1024x576.png" alt="">
+        </div>
+
+        <div class="slider-img-container">
+            <img class="slider-img" src="../Images/typeof-operator-in-javascript.png" alt="">
+        </div>
+        <div class="slider-img-container">
+            <img class="slider-img" src="../Images/types-of-javascript-loops-in-hindi.png" alt="">
+        </div>
+    </div>
+    <script>
+
+        let SliderImg = document.getElementsByClassName("slider-img-container")
+        console.log(SliderImg);
+        let counter = 0
+        function Slider() {
+            for (let index = 0; index < SliderImg.length; index++) {
+                SliderImg[index].style.display="none"
+                // const element = SliderImg[index];
+                // console.log(element);
+                // SliderImg[index].classList.remove("slider-effect")
+            }
+            console.log("counter",counter);
+            SliderImg[counter].style.display="block"
+            SliderImg[counter].classList.add("slider-effect")
+            counter++
+            // console.log("called slider");
+            setTimeout(Slider, 1000);
+            // setInterval(Slider, 2000);
+
+        }
+
+        Slider()
+    </script>
+</body>
+</html>
