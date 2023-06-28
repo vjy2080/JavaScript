@@ -56,7 +56,8 @@
         </div>
         <div>
             <input type="date" name="birth-date" id="birth-date">
-<div class="btn">&#x2714;</div>
+            <button class="btn">&#x2714;</button>
+            <!-- <div class="btn">&#x2714;</div> -->
         </div>
         <div id="gender">
             <label for="gender">Gender</label>
@@ -68,11 +69,17 @@
     </div>
 
     <script>
+let btn = document.getElementsByClassName("btn")
+console.log(btn);
+btn.forEach(element => {
+    element.addEventListener("click", function () {
+console.log("called" , this);        
+    })
+});
+// btn.addEventListener("click", function () {
+//     console.log("Called");
+// })
 
-document.getElementById("btn").addEventListener("click",function (params) {
-           console.log("called");
-            
-        })
 
 // let b = document.getElementsByTagName("input").value;
 //             console.log(b); 

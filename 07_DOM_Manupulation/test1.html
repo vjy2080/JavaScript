@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <input type="text" name="text" id="text">
+</body>
+<script>
+    console.log("called");
+    function name(params) {
+        
+    }
+    
+    let a = document.getElementById("text")
+    console.log(a);
+    a.addEventListener("blur", function () {
+        console.log("called2", this.value);
+    })
+
+    btn.forEach(element => {
+    element.addEventListener("click", function () {
+console.log("called" , this);        
+    })
+});
+</script>
+</html>
