@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <h3>Find factorial</h3>
+    <input type="number" name="number" id="inp" value="1">
+    <button onclick="calFactorial()">Enter</button>
+    <div>
+        <p>The Result is</p>
+        <div id="dis"></div>
+    </div>
+    <p>Open Console for display further javascript code log </p>
     <script>
-        var abc = prompt("Enter Data")
-        console.log("User Entered",abc);
-        console.log(typeof abc);
-        
-        console.log("parseFloat",typeof parseFloat(abc));
-        // console.log("parseFloat", typeof abc);
-        parseInt(abc)
-        console.log("parseInt", typeof parseInt(abc));
-        function factori(n) {
-            if (n === 0 || n===1) {
-                console.log(n);
-                return 1
+        // var abc = prompt("Enter Data")
+        // var abc = "123"
+        // console.log("User Entered :- ", abc);
+        // console.log("typeof abc :- ", typeof abc);
+        // let a = parseFloat(abc) // give an new variable
+        // console.log("parseFloat(abc)", a);
+        // console.log("typeof parseFloat(abc)", typeof a);
+        // console.log("typeof abc", typeof abc);  // do not change in original variable
+        // let b = parseInt(abc);
+        // console.log("parseInt(abc) :- ", b);
+        // console.log("parseInt(abc) :- ", typeof b);
+        // console.log("typeof abc :- ", typeof abc); // do not change in original variable
+
+
+        // let inp = parseInt(document.querySelector('#inp').value)
+        // // console.log(inp);
+
+        // function factorial(inp) {
+        //     if (inp === 0 || inp === 1) {
+        //         // console.log(n);
+        //         return 1
+        //     } else {
+        //         console.log("inside else", inp);
+
+        //         return inp * factorial(inp - 1)
+        //     }
+        // }
+
+        function calFactorial(inp) {
+            inp = (document.querySelector('#inp').value);
+            inp = parseFloat(inp)
+            // console.log(inp);
+            // console.log(typeof inp);
+            if (isNaN(inp)) {
+                document.querySelector('#dis').innerHTML = "<p>Please enter a valid number.</p>";
             } else {
-                console.log("inside else",n);
-                return n*factori(n-1)
+                document.querySelector('#dis').innerHTML = "<span>" + factorial(inp) + "</span>";
             }
-        }
-        console.log(factori(5));
-        
+        };
+        function factorial(inp) {
+            if (inp === 0 || inp === 1) {
+                return 1;
+            } else {
+                return inp * factorial(inp - 1);
+            }
+        };
     </script>
 </body>
+
 </html>
