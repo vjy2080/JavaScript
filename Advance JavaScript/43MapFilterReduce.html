@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map-Filter-Reduce Method</title>
+</head>
+<h1>Map-Filter-Reduce Method</h1>
+<h3>Map Method</h3>
+<p>Found here output</p>
+<div id="span1"></div>
+<div id="span2"></div>
+<div id="span3"></div>
+<div id="span4"></div>
+<div id="span5"></div>
+
+<body>
+    <script>
+
+
+        //                       <--- Map --->
+
+
+
+        // Old Method to write map function
+
+        const arr = [5, 1, 3, 2, 6];
+        console.log("Original array", arr);
+
+        const double = (x) => x * 2;
+        const output1 = arr.map(double)
+        const span1 = document.getElementById('span1').after("Result of double :- ", output1);
+        console.log("double of arry", output1);
+
+        const triple = (x) => x * 3;
+        const output2 = arr.map(triple)
+        const span2 = document.getElementById('span1').append("Result of triple :- ", output2);
+        console.log("triple of arry", output2);
+
+        const binary = (x) => x.toString(2);
+        const output3 = arr.map(binary)
+        const span3 = document.getElementById('span1').before("Result of binary :- ", output3);
+        console.log("binary of arry", output3);
+
+
+        // New and short trick for writing map function
+
+        const binary2 = arr.map((x) => x.toString(2))
+        console.log("binary of arry by short code trick", binary2);
+        const span4 = document.getElementById('span2').after("Result of New trick binary :- ", binary2);
+
+
+
+        //                       <--- Filter --->
+
+
+
+        // odd value 
+        const odd = arr.filter((x) => x % 2);
+        console.log("odd value", odd);
+
+
+        // Even Value
+        const Even = arr.filter((x) => x % 2 === 0);
+        console.log("Even Value", Even);
+
+        // Greter than value
+        const Greter = arr.filter((x) => x > 2);
+        console.log("Greter than value", Greter);
+
+
+
+        //                       <--- Reduce --->
+
+
+
+        //Without Reduce method Sum of all values in array
+
+        const findSum = (arr) => {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum = sum + arr[i];
+            }
+            return sum;
+        };
+
+        console.log("Sum of array value  Without reduce method", findSum(arr));
+
+        // With Reduce method Sum of all values in array
+
+        const arrSum = arr.reduce((accumulator, currentValue) => {
+            accumulator = accumulator + currentValue;
+            return accumulator;
+        }, 0); // 0 is an initialValue
+
+        console.log("sum of array value With reduce method", arrSum);
+
+        // With reduce Get maximum number in array
+
+        const arrMax = arr.reduce((a, c) => {
+            if (c > a) { a = c; }
+            return a
+        }, 0);
+        console.log("Maximum of of array value With reduce method", arrMax);
+
+
+        const users = [
+            { firstName: "vijay", lastName: "prajapati", age: 32 },
+            { firstName: "keyur", lastName: "patel", age: 28 },
+            { firstName: "dilip", lastName: "rathore", age: 21 },
+            { firstName: "kapil", lastName: "kadiya", age: 32 },
+        ];
+
+        console.log("Original array Users", users);
+
+        // find out list of full name of users
+
+        const fullName = users.map(x => x.firstName + " " + x.lastName + " is " + x.age + " Year old")
+        console.log("Full name of users by map method", fullName);
+        const span5 = document.getElementById('span5').before(fullName);
+
+        // Find out how many preson's have same age  
+
+        const sameAgePerson = users.reduce((a, b) => {
+            (a[b.age]) ? a[b.age] = ++a[b.age] : a[b.age] = 1;
+            return a
+        }, {});
+        console.log("Same Age Person", sameAgePerson);
+
+        // find out firstName from users array which have age > 25 year 
+
+        // Using filter and map
+        console.log("firstName from users array which have age > 25 year");
+
+        const firstNameUsers = users.filter((x) => x.age > 25).map((x) => x.firstName)
+        console.log("by Using filter and map", firstNameUsers);
+
+        // Using Reduce method
+        // find out firstName from users array which have age > 25 year 
+
+
+        const firstNameUser = users.reduce((acc, curr) => {
+            console.log(acc);
+            console.log(curr);
+            if (curr.age > 25) {
+                acc.push(curr.firstName + curr.lastName);
+            }
+            return acc;
+        }, []);
+
+        console.log("by Using Reduce", firstNameUser);
+
+
+
+
+    </script>
+</body>
+
+</html>""

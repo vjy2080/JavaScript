@@ -1,109 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get HTML Data</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Get HTML Data</title>
 	<link rel="stylesheet" href="../AllStyleSheet/CommonIntro.css">
 </head>
+
 <body>
-    <input type="text"  name="inp-name" class="inp-class" id="inp-id">
-    <input type="text"  name="pass" class="inp-class" id="inp-id1">
-    <input type="text" name="other" class="inp-class" id="inp-id2">
-    <!-- <input type="text" name="blur" onblur="getdata(this)" placeholder="this " class="inp-class" id="inp-id2"> -->
-	<!-- <input type="button" onclick="clkhandle()" value="click" name="btn" id="btn"> -->
-	<input type="button"  onblur="Blur()" value="click" name="btn" id="btn">
-	<!-- <div id="disp">
+	<input type="text" name="inp-name" class="inp-class" id="inp-id">
+	<input type="text" name="pass" class="inp-class" id="inp-id1">
+	<input type="text" name="other" class="inp-class" id="inp-id2">
+	<!-- <input type="text" name="blur" onblur="getdata(this)" placeholder="getdata()" class="inp-class" id="inp-id2"> -->
+	<!-- <input type="button" onclick="clkhandle()" value="clickhndl" name="btn" id="btn" > -->
+	<!-- <input type="button" onblur="Blur()" value="click" name="btn" id="btn"> -->
+	<input type="button" value="click" name="btn" id="btn">
+	
+	
+	<div id="disp"></div> 
 
-	</div> -->
+	<script>
 
-<script>
+		// function getdata(anything) {
+		// console.log(anything);
+		// }
 
-	// function getdata(anything) {
-	// 	console.log(anything);
-	// }
+		// EventHandler START
+		// Custom Function(UDF => user definded function)
+		
+		// function clkhandle() {
+			// console.log("called");
+			// let InpData = document.getElementById("inp-id").value
+			// let InpData1 = document.getElementById("inp-id1").value
+			// let InpData2 = document.getElementById("inp-id2").value
+			// let sumOfInpData = (InpData + InpData1 + InpData2);
+			// console.log(sumOfInpData);
+			// }
+			
 
-// EventHandler START
-// Custom Function (UDF => user definded function)
-// function clkhandle() {
-// 	// console.log("called");
-// 	let InpData = document.getElementById("inp-id").value
-// 	let InpData1 = document.getElementById("inp-id1").value
-// 	let InpData2 = document.getElementById("inp-id2").value
-// 	let sumOfInpData = (InpData + InpData1 + InpData2 );
-// 	console.log(sumOfInpData);
-// function Blur() {
-// 	// console.log("called");
-// 	let InpData = document.getElementById("inp-id").value
-// 	console.log(InpData);
-// 	let InpData1 = document.getElementById("inp-id1").value
-// 	console.log(InpData1);
-// 	let InpData2 = document.getElementById("inp-id2").value
-// 	console.log(InpData2);
-
-// }
-
-function Blur() {
-	// console.log("called");
-	let InpData = document.getElementById("inp-id").value
-	console.log(InpData);
-	let InpData1 = document.getElementById("inp-id1").value
-	console.log(InpData1);
-	let InpData2 = document.getElementById("inp-id2").value
-	console.log(InpData2);
-
-}
+			// function Blur() {
+				// console.log("called");
+				// let InpData = document.getElementById("inp-id").value
+				// console.log(InpData);
+				// let InpData1 = document.getElementById("inp-id1").value
+				// console.log(InpData1);
+				// let InpData2 = document.getElementById("inp-id2").value
+				// console.log(InpData2);
+				// let sumOfInpData = (InpData + InpData1 + InpData2);
+				// console.log(sumOfInpData);
+			// }
+// 
+			
 
 
+		// EventHandler END
 
-// EventHandler END
 
+		// EventListener START
 
-// EventListener START
+		document.getElementById("btn").addEventListener("click",function () {
+		// console.log("called");
+		// let InpData = document.getElementById("inp-id")
+		// console.log(InpData);
+		// console.log(InpData.value);
+		// let InpData = document.getElementById("inp-id").value
+		// console.log(InpData);
+		// let InpData = document.getElementsByClassName("inp-class") //HTMLCollection
+		// console.log(InpData);
+		// console.log(InpData[0]);
+		// console.log(InpData[0].value);
+		// console.log(InpData);
+		// console.log(InpData[2]);
+		// console.log(InpData[2].value);
+		// let InpData = document.getElementsByName("inp-name") //NodeList
+		// console.log(InpData);
+		// console.log(InpData[0]);
+		// let InpData = document.getElementsByTagName("input") //HTMLCollection
+		// console.log(InpData);
+		// console.log(InpData[0]);
+		// console.log(InpData[0].value);
+		// let InpData = document.querySelector("input") //HTMLCollection
+		// console.log(InpData);
+		// console.log(InpData.value);
+		// let InpData = document.querySelector(".inp-class") //HTMLCollection
+		// let InpData = document.querySelector("#inp-id") //HTMLCollection
+		// let InpData = document.querySelectorAll("#inp-id") //HTMLCollection
+		// let InpData = document.querySelectorAll(".inp-class") //HTMLCollection
+		// console.log(InpData);
+		// console.log(InpData[0]);
+		// console.log(InpData[0].value);
+			let InpData = document.querySelectorAll(".inp-class") //HTMLCollection
+			console.log(InpData);
+			console.log(InpData[0]);
+			console.log(InpData[1]);
+			console.log(InpData[2]);
+			console.log(InpData[0].value);
+			console.log(InpData[1].value);
+			console.log(InpData[2].value);
 
-// document.getElementById("btn").addEventListener("click",function () {
-	// console.log("called");
-	// let InpData = document.getElementById("inp-id")
-	// console.log(InpData);
-	// console.log(InpData.value);
-	// let InpData = document.getElementById("inp-id").value
-	// console.log(InpData);
-	// let InpData = document.getElementsByClassName("inp-class") //HTMLCollection 
-	// console.log(InpData);
-	// console.log(InpData[0]);
-	// console.log(InpData[0].value);
-	// console.log(InpData);
-	// console.log(InpData[2]);
-	// console.log(InpData[2].value);
-	// let InpData = document.getElementsByName("inp-name") //NodeList 
-	// console.log(InpData);
-	// console.log(InpData[0]);
-	// let InpData = document.getElementsByTagName("input") //HTMLCollection
-	// console.log(InpData);
-	// console.log(InpData[0]);
-	// console.log(InpData[0].value);
-	// let InpData = document.querySelector("input") //HTMLCollection
-	// console.log(InpData);
-	// console.log(InpData.value);
-	// let InpData = document.querySelector(".inp-class") //HTMLCollection
-	// let InpData = document.querySelector("#inp-id") //HTMLCollection
-	// let InpData = document.querySelectorAll("#inp-id") //HTMLCollection
-	// console.log(InpData);
-	// console.log(InpData[0]);
-	// console.log(InpData[0].value);
-// 	let InpData = document.querySelectorAll(".inp-class") //HTMLCollection
-// 	console.log(InpData);
-// 	console.log(InpData[0]);
-// 	console.log(InpData[0].value);
+		})
 
-// })
+		// EventListener END
 
-// EventListener END
+		// document.getElementById("disp").innerText = '<input type="text" name="" id="">'
+		// document.getElementById("disp").innerHTML = '<input type="text" name="" id="">'
 
-// document.getElementById("disp").innerText = '<input type="text" name="" id="">'
-// document.getElementById("disp").innerHTML = '<input type="text" name="" id="">'
-
-</script>
+	</script>
 </body>
+
 </html>

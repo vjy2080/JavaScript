@@ -7,10 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM - Manupulation</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         .form {
             background-color: lightblue;
             text-align: center;
-            height: 100vh;
+            /* height: 100vh; */
         }
 
         #gender {
@@ -69,37 +74,43 @@
     </div>
 
     <script>
-let btn = document.getElementsByClassName("btn")
-console.log(btn);
-btn.forEach(element => {
-    element.addEventListener("click", function () {
-console.log("called" , this);        
-    })
-});
-// btn.addEventListener("click", function () {
-//     console.log("Called");
-// })
+        // let btn = document.getElementsByClassName("btn")
+        // console.log(btn);
 
+        // let btnArr = [...btn]
+        // 
+        // btnArr.forEach(element => {
+        // element.addEventListener("click", function () {
+        // console.log("called" , this);        
+        // })
+        // });
 
-// let b = document.getElementsByTagName("input").value;
-//             console.log(b); 
-            
-//  button = document.querySelectorAll('button')
-//     console.log(button);
-//     // button.forEach(element => {
-//         // console.log(element);
-//         addEventListener("click",function () {
-//             // console.log("called");
-            
-//         })
-//     //    });
+        // 
+        // for (let i = 0; i < btn.length; i++) {
+        // btn[i].addEventListener("click", function () {
+        // console.log("Called");
+        // });
+        // }
+
+        // .let b = document.getElementsByTagName("input").value;
+        // console.log(b);
+
+        // button = document.querySelectorAll('button')
+        // console.log(button);
+        // button.forEach(element => {
+            // console.log(element);
+            // addEventListener("click", function () {
+                // console.log("called");
+// 
+            // })
+        // });
 
         // ("button") => {
-        //     console.log("called");
+            // console.log("called");
         // }
         // const username = document.getElementById("username").innerText
         // console.log(username);
-
+// 
 
     </script>
 </body>
